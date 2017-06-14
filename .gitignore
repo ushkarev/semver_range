@@ -1,0 +1,17 @@
+# compiled
+__pycache__/
+*.mo
+*.po~
+*.pot
+*.py[cod]
+*$py.class
+
+# packaging and installation
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# environments
+env/
+venv/
