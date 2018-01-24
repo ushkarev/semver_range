@@ -11,7 +11,7 @@ with open(os.path.join(root_path, 'README.rst')) as readme:
 
 setup(
     name='semver_range',
-    version='0.0.0-alpha',
+    version='0.0.1',
     author='Igor Ushkarev',
     url='https://github.com/ushkarev/semver_range',
     py_modules=['semver_range'],
@@ -20,7 +20,7 @@ setup(
     long_description=README,
     keywords='semver,semantic-versioning,semver_range',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
