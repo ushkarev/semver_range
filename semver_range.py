@@ -200,7 +200,9 @@ class Version:
         return self.__class__(str(self), loose=self.loose)
 
     def __eq__(self, other):
-        # NB: strict equality considers pre_release and build versions
+        """
+        Strict equality considers pre_release and build versions
+        """
         cls = self.__class__
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
@@ -213,7 +215,9 @@ class Version:
             compare_identifiers(self.build_identifiers, other.build_identifiers)
 
     def __lt__(self, other):
-        # NB: strict ordering considers pre_release and build versions
+        """
+        Strict ordering considers pre_release and build versions
+        """
         cls = self.__class__
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
@@ -232,7 +236,9 @@ class Version:
         return False
 
     def has_same_precedence(self, other):
-        # build version is ignored and different pre_release versions are considered equal
+        """
+        A looser form of __eq__, build version is ignored and different pre_release versions are considered equal
+        """
         cls = self.__class__
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
@@ -245,7 +251,9 @@ class Version:
         return (not self.pre_release and not other.pre_release) or (self.pre_release and other.pre_release)
 
     def precedes(self, other):
-        # build version is ignored and different pre_release versions are considered equal
+        """
+        A looser form of __lt__, build version is ignored and different pre_release versions are considered equal
+        """
         cls = self.__class__
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
