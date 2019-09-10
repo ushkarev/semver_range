@@ -11,7 +11,7 @@ with open(os.path.join(root_path, 'README.rst')) as readme:
 
 setup(
     name='semver_range',
-    version='0.0.2',
+    version='0.0.3',
     author='Igor Ushkarev',
     url='https://github.com/ushkarev/semver_range',
     py_modules=['semver_range'],
@@ -28,6 +28,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
     ],
     tests_require=['flake8'],
     test_suite='tests',

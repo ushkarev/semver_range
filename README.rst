@@ -5,8 +5,7 @@ Python package for `semantic versioning 2.0.0 <http://semver.org/spec/v2.0.0.htm
 that mimics the node `semver package <https://docs.npmjs.com/misc/semver>`_.
 The interface is designed to be more "pythonic" and does not match semver’s logic 100%.
 
-.. image:: https://travis-ci.org/ushkarev/semver_range.svg?branch=master
-    :target: https://travis-ci.org/ushkarev/semver_range
+.. image:: https://github.com/ushkarev/semver_range/workflows/Test%20semver_range/badge.svg
 
 Usage
 -----
