@@ -660,13 +660,13 @@ class RangeTestCase(unittest.TestCase):
 
     def test_invalid(self):
         data = [
-            ['blerg', '1.2.3'],
-            ['git+https://user:password0123@github.com/foo', '123.0.0'],
+            'blerg',
+            'git+https://user:password0123@github.com/foo',
 
-            ['>=1 a', '1.2.3'],
-            ['? >=1', '1.2.3'],
+            '>=1 a',
+            '? >=1',
         ]
-        for pattern, version in data:
+        for pattern in data:
             with self.assertRaises(ValueError, msg='Pattern should be invalid %s' % pattern):
                 Range(pattern, loose=True)
 

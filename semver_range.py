@@ -203,7 +203,7 @@ class Version:
         """
         Strict equality considers pre_release and build versions
         """
-        cls = self.__class__
+        cls = type(self)
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
         elif not isinstance(other, cls):
@@ -218,7 +218,7 @@ class Version:
         """
         Strict ordering considers pre_release and build versions
         """
-        cls = self.__class__
+        cls = type(self)
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
         elif not isinstance(other, cls):
@@ -239,7 +239,7 @@ class Version:
         """
         A looser form of __eq__, build version is ignored and different pre_release versions are considered equal
         """
-        cls = self.__class__
+        cls = type(self)
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
         elif not isinstance(other, cls):
@@ -254,7 +254,7 @@ class Version:
         """
         A looser form of __lt__, build version is ignored and different pre_release versions are considered equal
         """
-        cls = self.__class__
+        cls = type(self)
         if isinstance(other, str):
             other = cls(other, loose=self.loose)
         elif not isinstance(other, cls):
@@ -528,7 +528,7 @@ class Range:
         return any(group(version) for group in self.ranges)
 
     def __or__(self, other):
-        cls = self.__class__
+        cls = type(self)
         if isinstance(other, str):
             other = cls(other)
         elif not isinstance(other, cls):
